@@ -1,6 +1,6 @@
 export default function isValid(letter) {
   // ¡No dejes que el Grinch gane!
-  const regExp = /\([^)]+\)/g; //expresión regular que permite cualquier caracter entre paréntesis menos un ')'
+  const regExp = /\(([^)]+)\)/g; //expresión regular que permite cualquier caracter entre paréntesis menos un ')'
   if (letter.includes("()") || letter.includes("{") || letter.includes("[")) //No permite ni "()", ni un "{" ni un "[" 
     return false;
   else if (regExp.test(letter))
